@@ -91,12 +91,38 @@ const plugin = zestyUI();
 
 ## Components
 
-Zesty UI includes pre-built components for common UI patterns:
+Zesty UI includes pre-built components for common UI patterns, all with full TypeScript support and Preact integration:
 
-- **Button**: Customizable button component with multiple variants
-- More components coming soon...
+- **ZButton** - Styled button component
+- **ZCard** - Container component for content grouping
+- **ZestyUIProvider** - Theme provider for managing light/dark modes
+- **ZThemeToggle** - Interactive theme switcher island component
 
-All components are fully typed and accessible.
+For detailed documentation on all components, props, types, and examples, see [COMPONENTS.md](./COMPONENTS.md).
+
+## TypeScript & Types
+
+All Zesty UI components are fully typed with TypeScript. Component interfaces include:
+
+```typescript
+// Button component
+interface ZButtonProps {
+  children: preact.ComponentChildren;
+}
+
+// Theme provider
+interface ZestyUIProviderProps extends preact.HTMLAttributes<HTMLDivElement> {
+  theme?: 'light' | 'dark';
+  children: preact.ComponentChildren;
+}
+
+// Theme toggle
+interface ZThemeToggleProps {
+  value?: 'light' | 'dark';
+}
+```
+
+All types are automatically included when you import components. No additional type definitions needed.
 
 ## Customization
 
@@ -132,3 +158,9 @@ MIT
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## Additional Resources
+
+- [Component Documentation](./COMPONENTS.md) - Detailed component API, props, types, and examples
+- [JSR Package](https://jsr.io/@zesty/ui) - Package registry page
+

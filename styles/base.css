@@ -1,7 +1,7 @@
 @layer zui.base {
   .zui {
     font-family: system-ui, sans-serif;
-    background: var(--zui-bg);
+    background-color: var(--zui-bg);
     color: var(--zui-fg);
   }
 }
