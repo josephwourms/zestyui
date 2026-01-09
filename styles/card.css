@@ -1,0 +1,11 @@
+@layer zui.components {
+  @scope (.zui [data-zui="card"]) {
+    .root {
+      background: var(--zui-bg);
+      color: var(--zui-fg);
+      border-radius: var(--zui-radius);
+      padding: 1rem;
+      box-shadow: 0 0 0 1px rgb(0 0 0 / 8%);
+    }
+  }
+}

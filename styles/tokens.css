@@ -1,0 +1,16 @@
+@layer zui.tokens {
+  .zui {
+    --zui-bg: #ffffff;
+    --zui-fg: #020617;
+    --zui-muted: #64748b;
+    --zui-primary: #2563eb;
+    --zui-radius: 0.75rem;
+  }
+
+  .zui[data-theme="dark"] {
+    --zui-bg: #020617;
+    --zui-fg: #f8fafc;
+    --zui-muted: #94a3b8;
+    --zui-primary: #60a5fa;
+  }
+}

@@ -1,0 +1,13 @@
+@layer zui.tokens {
+  .zui[data-zui-theme="ocean"] {
+    --zui-primary: #0284c7;
+    --zui-bg: #ecfeff;
+    --zui-fg: #083344;
+  }
+
+  .zui[data-zui-theme="rose"] {
+    --zui-primary: #e11d48;
+    --zui-bg: #fff1f2;
+    --zui-fg: #4c0519;
+  }
+}

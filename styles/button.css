@@ -1,0 +1,13 @@
+@layer zui.components {
+  @scope (.zui [data-zui="button"]) {
+    .root {
+      background: var(--zui-primary);
+      color: white;
+      border-radius: var(--zui-radius);
+      padding: 0.6rem 1rem;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
