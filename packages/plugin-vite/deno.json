@@ -1,0 +1,14 @@
+{
+    "name": "@zesty/plugin-vite",
+    "version": "0.1.3",
+    "license": "MIT",
+    "exports": {
+        ".": "./mod.ts"
+    },
+    "imports": {
+        "vite": "npm:vite@^7.1.3"
+    },
+    "compilerOptions": {
+        "lib": ["deno.unstable"]
+    }
+}

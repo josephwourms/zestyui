@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import * as path from "@std/path";
-import { transform } from "lightningcss";
 
 const __filename = path.fromFileUrl(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,7 +11,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        styles: path.resolve(__dirname, "./styles.css"),
+        styles: path.resolve(__dirname, "./src/styles.css"),
       },
       output: {
         assetFileNames: "[name][extname]",
@@ -20,10 +19,11 @@ export default defineConfig({
     },
   },
   css: {
+    transformer: 'lightningcss',
     lightningcss: {
       drafts: {
-        nesting: true,
-      },
+        customMedia: true,
+      }
     },
   },
 });

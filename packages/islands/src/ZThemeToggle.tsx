@@ -1,9 +1,10 @@
 import type { JSX } from "preact";
 import { useCallback } from "preact/hooks";
 import { useSignal } from "@preact/signals";
+import type { Signal } from "@preact/signals";
 
-export function ZThemeToggle(props: { value?: "light" | "dark" }): JSX.Element {
-    const theme = useSignal(props.value || "light");
+export function ZThemeToggle(props: { value?: "light" | "dark"; theme?: Signal<"light" | "dark"> }): JSX.Element {
+  const theme = props.theme || useSignal(props.value || "light");
   const toggle = useCallback((e: Event) => {
     const btn = e.currentTarget as HTMLElement;
     const root = btn.closest(".zui");
@@ -11,9 +12,10 @@ export function ZThemeToggle(props: { value?: "light" | "dark" }): JSX.Element {
     if (!root) return;
 
     const current = root.getAttribute("data-theme") ?? "light";
-    theme.value = current === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", theme.value);
-  }, []);
+    const newTheme = current === "dark" ? "light" : "dark";
+    theme.value = newTheme;
+    root.setAttribute("data-theme", newTheme);
+  }, [theme]);
 
   return (
     <div data-zui="theme-toggle">
