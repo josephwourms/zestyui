@@ -21,6 +21,6 @@
             "mod.ts",
             "deno.json"
         ],
-        "exclude": ["www", ".gitignore"]
+        "exclude": ["www", ".gitignore", "!dist/**"]
     }
 }
