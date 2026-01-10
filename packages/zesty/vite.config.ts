@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   root: ".",
   build: {
-    outDir: "./dist",
+    outDir: "../plugin-vite/dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {

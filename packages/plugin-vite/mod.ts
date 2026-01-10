@@ -1,7 +1,7 @@
 import { Plugin } from "vite";
 
 export function zestyui(): Plugin {
-  const cssContent = Deno.readTextFileSync(new URL("../core/dist/styles.css", import.meta.url));
+  const cssContent = Deno.readTextFileSync(new URL("./dist/styles.css", import.meta.url));
   return {
     name: "zestyui",
     enforce: "pre",
