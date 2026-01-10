@@ -1,3 +1,3 @@
-import { signal } from "@preact/signals";
+import { signal, type Signal } from "@preact/signals";
 
-export const theme = signal<"light" | "dark">("light");
+export const theme = signal<"light" | "dark">("light") as Signal<"light" | "dark">;

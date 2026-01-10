@@ -2,7 +2,7 @@ import { useEffect } from "preact/hooks";
 import { ZestyUIProvider } from "@zesty/core";
 import { theme } from "@zesty/core";
 
-export function ZThemeProvider({ children }: { children: preact.ComponentChildren }) {
+export function ZThemeProvider({ children }: { children: preact.ComponentChildren }): preact.JSX.Element {
   useEffect(() => {
     if (typeof window === "undefined") return;
 

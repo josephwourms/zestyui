@@ -58,7 +58,7 @@ async function updatePackageVersion(
     if (error instanceof Deno.errors.NotFound) {
       return;
     }
-    console.error(`❌ Error updating ${packagePath}:`, error.message);
+    console.error(`❌ Error updating ${packagePath}:`, (error as { message?: string }).message);
   }
 }
 
