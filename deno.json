@@ -16,11 +16,11 @@
     "publish": {
         "include": [
             "src/**",
+            "dist/**",
             "LICENSE",
             "README.md",
             "mod.ts",
             "deno.json"
-        ],
-        "exclude": ["www", ".gitignore", "!dist/**"]
+        ]
     }
 }

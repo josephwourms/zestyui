@@ -1,5 +1,5 @@
 import { Plugin } from "vite";
-import { styles } from "./dist/styles.ts";
+import { styles } from "./generated/styles.ts";
 
 export function zestyui(): Plugin {
   return {

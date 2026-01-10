@@ -36,7 +36,7 @@ export const styles = ${JSON.stringify(cssContent)};
 export default defineConfig({
   root: ".",
   build: {
-    outDir: "../plugin-vite/dist",
+    outDir: "../plugin-vite/generated",
     emptyOutDir: true,
     rollupOptions: {
       input: {
